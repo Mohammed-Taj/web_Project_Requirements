@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the navigation bar */
+ul.navigation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar {
+  background-color: #b19dd0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border-bottom: 1px solid white;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #b19dd0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation-list {
+    padding: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: auto !important;
+  }
+
+  .navigation-list li {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.logo {
+  max-width: 80px;
+  height: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.section-item {
+  position: relative;
+}
+
+.section-image {
+  width: 318px;
+  height: 265px;
+}
+
+.section-description {
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  /* Adjust the layout for smaller screens */
+  .section {
+    flex-direction: column;
+  }
+
+  .section-item {
+    margin-bottom: 20px;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slideshow-container .mySlides img {
+    height: auto;
+  }
+}
+
+/* Form Styles */
+.form-container {
+  display: none;
+  margin-top: 20px;
+}
+
+.form-container.show {
+  display: block;
+}
+
+.form-input {
+  margin-bottom: 10px;
+}
+
+.form-submit {
+  margin-top: 10px;
+}
+
+.form-message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/*Section for comments */
+.comment {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment .logo img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 10px;
+}
+
+.approval-icons {
+  display: flex;
+  align-items: center;
+}
+
+.approval-icon {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.approval-counters {
+  margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #b19dd0;
+  padding-bottom: 1px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}

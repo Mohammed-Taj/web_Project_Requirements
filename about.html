@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Product evaluation</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img class="logo" src="images/sheel-logo.png" alt="Website Logo" />
+        <nav>
+          <ul class="navigation-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="comment">
+      <span class="logo"><img src="images/logo.png" alt="" /></span>
+      <div class="name">Mohammed Taj</div>
+      <div class="content">
+        Lorem ipsum de nulla. Molestias, perspiciatis dolores?.
+      </div>
+      <div class="approval">
+        <span class="approval-icon" onclick="incrementCounter(this)">❤️</span>
+        <span class="approval-count">0</span> Like
+      </div>
+      <div class="disapproval">
+        <span class="approval-icon" onclick="incrementCounter(this)">👎</span>
+        <span class="approval-count">0</span> Unlike
+      </div>
+    </div>
+
+    <div class="comment">
+      <span class="logo"><img src="images/logo.png" alt="" /></span>
+      <div class="name">Ahmed Taj</div>
+      <div class="content">
+        Lorem ipsum de nulla. Molestias, perspiciatis dolores?.
+      </div>
+      <div class="approval">
+        <span class="approval-icon" onclick="incrementCounter(this)">❤️</span>
+        <span class="approval-count">0</span> Like
+      </div>
+      <div class="disapproval">
+        <span class="approval-icon" onclick="incrementCounter(this)">👎</span>
+        <span class="approval-count">0</span> Unlike
+      </div>
+    </div>
+
+    <script>
+      function incrementCounter(element) {
+        var countElement = element.nextElementSibling;
+        var count = parseInt(countElement.textContent);
+        count++;
+        countElement.textContent = count;
+      }
+    </script>
+  </body>
+</html>

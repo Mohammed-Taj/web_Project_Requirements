@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+    <title>Table with Form</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img class="logo" src="images/sheel-logo.png" alt="Website Logo" />
+        <nav>
+          <ul class="navigation-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <h2>Table with Form</h2>
+
+    <form id="myForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <footer>
+      <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get form values
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+
+          // Create new row in the table
+          var table = document
+            .getElementById("myTable")
+            .getElementsByTagName("tbody")[0];
+          var newRow = table.insertRow();
+
+          // Insert data into the new row
+          var cell1 = newRow.insertCell(0);
+          var cell2 = newRow.insertCell(1);
+          cell1.innerHTML = name;
+          cell2.innerHTML = email;
+
+          // Clear form fields
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+        });
+    </script>
+  </body>
+</html>
