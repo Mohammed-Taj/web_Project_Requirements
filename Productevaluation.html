@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>التقييم</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="images/sheel2.png" alt="Logo" />
+        </div>
+        <i class="fas fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
+        <ul class="navigation-list" id="navigation-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="store.html">المتجر</a></li>
+          <li><a href="Productevaluation.html">قيم المنتجات</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="text-box">
+        <h1>Welcome to Your Website</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          vestibulum ultricies risus, et ultricies metus consequat id. Curabitur
+          non nisl dui.
+        </p>
+        <a href="#" class="hero-btn">Learn More</a>
+      </div>
+    </header>
+    <div class="page">
+      <h1>تقييم المنتجات</h1>
+    </div>
+
+    <div dir="rtl" class="comment">
+      <span class="logo"><img src="images/p1.jpg" alt="" /></span>
+      <div class="name">Mohammed Taj</div>
+      <div class="content">
+        Lorem ipsum de nulla. Molestias, perspiciatis dolores?.
+      </div>
+      <div class="approval">
+        <span class="approval-icon" onclick="incrementCounter(this)">❤️</span>
+        <span class="approval-count">0</span>
+      </div>
+      <div class="disapproval">
+        <span class="approval-icon" onclick="incrementCounter(this)">👎</span>
+        <span class="approval-count">0</span>
+      </div>
+    </div>
+
+    <div dir="rtl" class="comment">
+      <span class="logo"><img src="images/logo.png" alt="" /></span>
+      <div class="name">Ahmed Taj</div>
+      <div class="content">
+        Lorem ipsum de nulla. Molestias, perspiciatis dolores?.
+      </div>
+      <div class="approval">
+        <span class="approval-icon" onclick="incrementCounter(this)">❤️</span>
+        <span class="approval-count">0</span>
+      </div>
+      <div class="disapproval">
+        <span class="approval-icon" onclick="incrementCounter(this)">👎</span>
+        <span class="approval-count">0</span>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>من نحن</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              facilisis tristique dapibus.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>تواصل معنا</h3>
+            <p>الإيميل: info@example.com</p>
+            <p>الهاتف: 123-456-7890</p>
+          </div>
+          <div class="footer-column">
+            <h3>تابع صفحاتنا</h3>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; جميع الحقوق محفوظة. 2023 متجر شييل.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function incrementCounter(element) {
+        var countElement = element.nextElementSibling;
+        var count = parseInt(countElement.textContent);
+        count++;
+        countElement.textContent = count;
+      }
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

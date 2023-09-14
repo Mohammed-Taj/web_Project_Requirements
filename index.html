@@ -3,38 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>SHEEL STORE</title>
   </head>
+
   <body>
     <header>
-      <div class="navbar">
-        <img class="logo" src="images/sheel-logo.png" alt="sheel Logo" />
-        <nav>
-          <ul class="navigation-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img src="images/sheel2.png" alt="Logo" />
+        </div>
+        <i class="fas fa-bars" id="menu-icon" onclick="toggleMenu()"></i>
+        <ul class="navigation-list" id="navigation-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="store.html">المتجر</a></li>
+          <li><a href="Productevaluation.html">قيم المنتجات</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="text-box">
+        <h1>Welcome to Your Website</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          vestibulum ultricies risus, et ultricies metus consequat id. Curabitur
+          non nisl dui.
+        </p>
+        <a href="#" class="hero-btn">Learn More</a>
       </div>
     </header>
+    <div class="page">
+      <h1>الرئيسية</h1>
+    </div>
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
       <!-- Full-width images with number and caption text -->
       <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
         <img
           src="images/sliders/slide1.jpg"
           style="width: 100%; height: 300px"
         />
-        <div class="text">Caption Text</div>
+        <div class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem obcaecati nostrum, laborum cumque iusto minima. Cum
+          labore architecto iure possimus a ducimus deleniti voluptatum debitis
+          assumenda, pariatur eaque molestiae perspiciatis?
+        </div>
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
         <img
           src="images/sliders/slide2.jfif"
           style="width: 100%; height: 300px"
@@ -43,7 +69,6 @@
       </div>
 
       <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
         <img
           src="images/sliders/slide3.jpg"
           style="width: 100%; height: 300px"
@@ -65,7 +90,6 @@
     </div>
     <!-- End of slideshow container -->
 
-    <!-- Three Sections -->
     <div class="grid-container">
       <div class="section-item">
         <div class="section-title"><h2>Title 1</h2></div>
@@ -84,8 +108,8 @@
 
         <p class="section-description">
           <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
-        magnam officia. Iste voluptate reiciendis autem. Illo, sint fugiat
-        distinctio beatae veniam commodi sed corrupti explicabo accusamus -->
+          magnam officia. Iste voluptate reiciendis autem. Illo, sint fugiat
+          distinctio beatae veniam commodi sed corrupti explicabo accusamus -->
           voluptatibus dolorem sunt eius!
         </p>
       </div>
@@ -101,11 +125,80 @@
         </p>
       </div>
     </div>
-
+    <!-- footer -->
     <footer>
-      <p>&copy; 2023 SHEEL STORE. All rights reserved.</p>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>من نحن</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              facilisis tristique dapibus.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>تواصل معنا</h3>
+            <p>الإيميل: info@example.com</p>
+            <p>الهاتف: 123-456-7890</p>
+          </div>
+          <div class="footer-column">
+            <h3>تابع صفحاتنا</h3>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; جميع الحقوق محفوظة. 2023 متجر شييل.</p>
+        </div>
+      </div>
     </footer>
 
+    <script>
+      // // wow slider
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>
